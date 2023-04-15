@@ -1,4 +1,4 @@
-import * as tf from "@tensorflow/tfjs";
+//import * as tf from "@tensorflow/tfjs";
 import * as qna from "@tensorflow-models/qna";
 import './App.css';
 import { useEffect, useState, useRef } from "react";
