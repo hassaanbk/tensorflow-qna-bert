@@ -26,6 +26,12 @@ jobs:
           npm install
           npm run build --if-present
       
+      - name: Docker Login, Build and Push to DockerHub
+        run: |
+          docker login -u hassaanbk -p {{ secrets.DOCKER_TOKEN }}
+          docker build -t hassaanbk/tensorflow-qna .
+          docker push hassaanbk/tensorflow-qna
+
       - name: Archive the build artifacts
         uses: actions/upload-artifact@v2
         with:
